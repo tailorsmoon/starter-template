@@ -21,7 +21,8 @@
 	 */
 	"workflows": [
 		{
-			"name": "my-workflow",
+			// wrangler.jsonc
+			"name": "css",
 			"binding": "MY_WORKFLOW",
 			"class_name": "MyWorkflow"
 		}
