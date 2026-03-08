@@ -1,0 +1,207 @@
+@charset "UTF-8";
+
+
+
+:root {
+    --grey-1:     #b8b8bf;
+    --grey-2:     #616161;
+
+    --blue-1:     #c7deff;
+    --blue-2:     #728bb0;
+    --blue-3:     #2D3D67;
+    --blue-4:     #11192C;
+
+    --brown-1:    #fbf5bf;
+    --brown-2:    #f2e48f;
+    --brown-3:    #ab925c;
+    
+    --red-1:      #d95400;
+    
+    --blue-gradient:  linear-gradient(to left, var(--blue-4), var(--blue-3), var(--blue-2));
+    --box-gradient: radial-gradient(var(--blue-3), var(--blue-2));
+    --wallpaper: linear-gradient(to bottom, var(--blue-4), var(--blue-3), var(--blue-4));
+
+
+    --silver: linear-gradient(to right, #616161, #ffffff, #b8b8bf, #728bb0);
+        
+    --gold: linear-gradient(to right, #FFFADE, #FFE759, #EBC900, #8C7800, #6E5E00,  #8C7800, #EBC900, #8C7800, #BA9F00,  #6E5E00, #3B3200);
+    
+    --shadow: 2px 2px 5px black;
+
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    background: var(--wallpaper);
+    font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
+    font-weight: 400;
+    width: 100%;
+    margin: 0;
+}
+.center {
+    text-align: center;
+    place-items: center;
+    place-content: center;
+    margin: auto;
+}
+.right {
+    text-align: right;
+    place-content: right;
+    place-items: right;
+    margin: auto;
+}
+
+.shadow {box-shadow: var(--shadow)}
+
+.text-shadow {text-shadow: 5px 10px 12px var(--blue-4);}
+
+.border-y {border-top: 2px ridge var(--brown-2);  border-bottom: 2px ridge var(--brown-2); width: 100%;}
+
+/* Navigation */
+header {
+    width: 100%;
+    height: 5%;}
+
+.banner { 
+margin: 25px;
+transition: all 0.3s linear;}
+
+
+
+
+nav {
+    float: right;
+    width: 100%;
+    text-align: right;
+    font-family: inherit;
+    font-size: 14px;
+    margin: 0 0 40px 0;
+    padding: 20px 0;
+    border-top: 2px ridge var(--brown-3);
+    border-bottom: 2px ridge var(--brown-3);
+    box-shadow: 0 0 15px var(--brown-1);
+    background: var(--blue-gradient);
+
+
+}
+
+header nav ul {
+	list-style: none;
+    margin: auto;
+    float: right;
+}
+
+nav ul li {
+	float: left;
+	text-align: left;
+	margin-right: 15px;
+	letter-spacing: 2px;
+}
+
+ul li a {
+	color: var(--brown-1);
+	text-decoration: none;
+}
+
+ul li:hover a {
+    color: var(--blue-1);
+    transition: all 0.3s linear;
+}
+
+.light {
+	font-weight: bold;
+	color: var(--brown-1);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-shadow: 1px 0 2px black;
+    width: 100%;
+    
+    padding: 0;
+    margin: 0; 
+    letter-spacing: 2.5px;}
+
+
+.hidden {
+	display: none;
+}
+
+.contact {
+    background-image: url('Images/Screenshot_20260304-012452.Instagram~2.png');
+    padding: 2rem;
+    margin: 6rem 2rem;
+    width: 100%;
+    border: 2px ridge var(--brown-2);
+    border-radius: 10px;
+    color: var(--blue-4);
+    
+    
+    
+}
+
+/* Button */
+.button {
+    display: inline-block;
+    width: 8rem;
+    padding: .5rem 2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    border: 2px outset var(--brown-1);
+    background: var(--blue-4);
+}
+
+
+p {
+    font-size: 16px;
+    padding: 10px;
+    margin: 5px auto;
+}
+
+a {color: var(--brown-1);
+    text-decoration: none;
+    font-weigth: 800;
+}
+
+/* Responsive Images */
+img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+.frame {
+    margin: auto;
+    height: 100%;
+}
+
+/* Desktop Nav */
+@media (min-width: 768px) {
+  nav ul {
+    flex-direction: row;
+    justify-content: center;
+    }}
+
+/* Mobile */
+@media (max-width: 320px) {
+    
+}
+
+/* Small Tablets */
+@media (min-width: 321px)and (max-width: 767px) {
+    nav ul li{display: flex;
+    flex-direction: column; margin-left: 220px; margin-bottom: 20px; float: right; font-size: 14px}
+    nav li a {display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Small Desktops */
+@media (min-width: 768px) and (max-width: 1096px) {}
